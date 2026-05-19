@@ -1,24 +1,22 @@
-const switchers = document.querySelectorAll('.switcher');
+const tabs = document.querySelectorAll(".tab");
+const forms = document.querySelectorAll(".form");
 
-switchers.forEach(btn => {
-  btn.addEventListener('click', () => {
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
 
-    const current = document.querySelector('.form-wrapper.is-active');
-    const target = btn.parentElement;
+    // tab active
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
 
-    if (current === target) return;
+    // show form
+    const target = tab.getAttribute("data-target");
 
-    current.classList.add('is-leaving');
-
-    setTimeout(() => {
-      current.classList.remove('is-active', 'is-leaving');
-      target.classList.add('is-active', 'is-entering');
-
-      setTimeout(() => {
-        target.classList.remove('is-entering');
-      }, 300);
-
-    }, 200);
+    forms.forEach(form => {
+      form.classList.remove("show");
+      if (form.id === target) {
+        form.classList.add("show");
+      }
+    });
 
   });
 });
