@@ -2,104 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login & Signup</title>
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Login Signup</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <section class="forms-section">
+<div class="container">
 
-    <h1 class="section-title">
-      Login & Signup Forms
-    </h1>
+  <div class="tabs">
+    <button class="tab active" data-target="login">Login</button>
+    <button class="tab" data-target="signup">Sign Up</button>
+  </div>
 
-    <div class="forms">
+  <div class="box">
 
-      <!-- LOGIN -->
-      <div class="form-wrapper is-active">
+    <!-- LOGIN -->
+    <form id="login" class="form show">
+      <h2>Login</h2>
 
-        <button type="button" class="switcher switcher-login">
-          Login
-          <span class="underline"></span>
-        </button>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
 
-        <form class="form form-login">
+      <button type="submit">Login</button>
+    </form>
 
-          <fieldset>
+    <!-- SIGNUP -->
+    <form id="signup" class="form">
+      <h2>Sign Up</h2>
 
-            <legend>
-              Please enter your email and password.
-            </legend>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
 
-            <div class="input-block">
-              <label for="login-email">E-mail</label>
-              <input id="login-email" type="email" required />
-            </div>
+      <button type="submit">Sign Up</button>
+    </form>
 
-            <div class="input-block">
-              <label for="login-password">Password</label>
-              <input id="login-password" type="password" required />
-            </div>
+  </div>
 
-          </fieldset>
+</div>
 
-          <button type="submit" class="btn-login">
-            Login
-          </button>
-
-        </form>
-      </div>
-
-      <!-- SIGNUP -->
-      <div class="form-wrapper">
-
-        <button type="button" class="switcher switcher-signup">
-          Sign Up
-          <span class="underline"></span>
-        </button>
-
-        <form class="form form-signup">
-
-          <fieldset>
-
-            <legend>
-              Please enter your information.
-            </legend>
-
-            <div class="input-block">
-              <label for="signup-username">Username</label>
-              <input id="signup-username" type="text" required />
-            </div>
-
-            <div class="input-block">
-              <label for="signup-email">E-mail</label>
-              <input id="signup-email" type="email" required />
-            </div>
-
-            <div class="input-block">
-              <label for="signup-password">Password</label>
-              <input id="signup-password" type="password" required />
-            </div>
-
-          </fieldset>
-
-          <button type="submit" class="btn-signup">
-            Sign Up
-          </button>
-
-        </form>
-      </div>
-
-    </div>
-
-  </section>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
