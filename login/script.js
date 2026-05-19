@@ -1,8 +1,24 @@
-const switchers = [...document.querySelectorAll('.switcher')]
+const switchers = document.querySelectorAll('.switcher');
 
-switchers.forEach(item => {
-	item.addEventListener('click', function() {
-		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
-		this.parentElement.classList.add('is-active')
-	})
-})
+switchers.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    const current = document.querySelector('.form-wrapper.is-active');
+    const target = btn.parentElement;
+
+    if (current === target) return;
+
+    current.classList.add('is-leaving');
+
+    setTimeout(() => {
+      current.classList.remove('is-active', 'is-leaving');
+      target.classList.add('is-active', 'is-entering');
+
+      setTimeout(() => {
+        target.classList.remove('is-entering');
+      }, 300);
+
+    }, 200);
+
+  });
+});
