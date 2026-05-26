@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="tabs">
+    <button class="tab active" data-target="login">Login</button>
+    <button class="tab" data-target="signup">Sign Up</button>
+  </div>
+
+  <div class="box">
+
+    <!-- LOGIN -->
+    <form id="loginForm" class="form show">
+      <h2>Silahkan Login</h2>
+      
+      <input type="text" id="username" placeholder="Nama Pengguna .." required="required">
+      
+      <input type="password" id="password" placeholder="Password .." required="required">
+      
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- SIGNUP -->
+    <form id="registerForm" class="form">
+      <h2>Register</h2>
+    
+      <input type="text" id="username" required placeholder="Username" required>
+      <input type="email" id="email" required placeholder="Email" required>
+      <input type="password" id="password" required placeholder="Password" required>
+
+      <button type="submit">Register</button>
+    </form>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>
